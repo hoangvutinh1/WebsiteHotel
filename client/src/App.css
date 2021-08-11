@@ -7,6 +7,9 @@
   line-height: normal;
   color:white
 }
+a{
+text-decoration: none;
+}
 :root {
   --primaryColor: #3f51b5;
   --mainWhite: #fff;
@@ -94,56 +97,7 @@ a{
 }
 /* end of globals */
 /* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.75rem 2rem;
-  background: var(--offWhite);
-  z-index: 1;
-}
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-}
-.nav-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-.nav-icon {
-  font-size: 1.5rem;
-  color: var(--primaryColor);
-}
-.nav-links {
-  height: 0;
-  overflow: hidden;
-  transition: var(--mainTransition);
-  line-height: 1.4;
-  list-style-type: none;
-}
-.nav-links a {
-  line-height: 1;
-  text-decoration: none;
-  padding: 1rem 0;
-  color: white;
-  transition: var(--mainTransition);
-/*   text-align: center; */
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: var(--mainSpacing);
-}
-.nav-links a:hover {
-  color: var(--primaryColor);
-}
-a {
-  text-decoration:none;
-}
-.show-nav {
-  height: 200px;
-}
+
 @media screen and (min-width: 768px) {
   .nav-btn {
     display: none;
@@ -237,38 +191,7 @@ a {
 }
 /* end of Title */
 
-/* services */
-.services {
-  padding: 5rem 0;
-}
-.services {
-  background: var(--darkGrey);
-  text-align: center;
-}
-.services-center {
-  width: 90vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 50px;
-}
-label{
-  color:white;
-}
-.service span {
-  display: inline-block;
-  color: var(--primaryColor);
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-.services h6 {
-  letter-spacing: var(--mainSpacing);
-}
-.services p {
-  width: 80%;
-  margin: 0 auto;
-}
+
 @media screen and (min-width: 992px) {
   .services-center {
     width: 95vw;

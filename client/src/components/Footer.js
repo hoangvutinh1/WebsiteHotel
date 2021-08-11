@@ -38,7 +38,7 @@ function Footer() {
                                 </Link>
                             </Box>
                             <Box>
-                                <Link to='/login'>
+                                <Link to='/singup'>
                                     Đăng ký
                                 </Link>
                             </Box>
