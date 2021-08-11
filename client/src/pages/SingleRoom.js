@@ -7,7 +7,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Button, Grid, Paper, Avatar, Typography } from '@material-ui/core';
 import StyledHero from '../components/StyledHero';
-import { getUser } from '../Utils/Common';
 import Comments from '../components/Comments';
 import defaultImg from '../images/single.jpg';
 import defaultImg1 from '../images/double.jpg';
@@ -50,7 +49,7 @@ export default class SingleRoom extends Component {
             this.setState({ comment: CommentLists.concat(newComment) })
            
         }
-        const user = getUser()
+        
 
         let imgLink = "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260";
         const { getRoom } = this.context;

@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import bcrypt from 'bcryptjs';
 import { Link } from 'react-router-dom';
-import { setUserSession } from '../Utils/Common';
-import { isEmpty } from 'validator/lib/isEmpty';
-import isEmail from "validator/lib/isEmail"
 import { makeStyles } from '@material-ui/core/styles';
 import { Dialog, Button, TextField, Card, CardContent, Typography } from '@material-ui/core';
 function SignUp(props) {

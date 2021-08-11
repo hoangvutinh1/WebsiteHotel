@@ -12,31 +12,33 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Footer from './components/Footer';
 import axios from 'axios';
-import { getToken, removeUserSession, setUserSession, getUser } from './Utils/Common';
+import { useContext } from 'react';
+import { RoomContext } from './context';
 import Login from './pages/Login';
 import SignUp from './pages/SingUp';
 import RoomOrder from './pages/RoomOrder';
 function App() {
   const [authLoading, setAuthLoading] = useState(true);
-
+  const context=useContext(RoomContext)
   useEffect(() => {
-    const token = getToken();
+    const token = context.getToken();
     if (!token) {
       return;
     }
     axios.get(`http://localhost:4000/verifyToken?token=${token}`).then(response => {
-      setUserSession(response.data.token, response.data.user);
+      context.setUserSession(response.data.token, response.data.user);
       setAuthLoading(false);
     }).catch(error => {
-      removeUserSession();
+       context.removeUserSession();
       setAuthLoading(false);
     });
   }, []);
 
-  if (authLoading && getToken()) {
+ /*  if (authLoading && context.getToken()) {
+    console.log(context.getToken())
     return <div className="content">Checking Authentication...</div>
   }
-
+ */
   return <>
     <Navbar></Navbar>
     <Switch>

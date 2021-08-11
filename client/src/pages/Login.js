@@ -26,7 +26,6 @@ function LoginPage(props) {
 
         axios.post('http://localhost:4000/login', { username: username, password: password }).then(response => {
             setLoading(false);
-            console.log(response)
             setUserSession(response.data.token, response.data.user);
             props.history.push("/")
 

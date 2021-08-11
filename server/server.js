@@ -229,8 +229,8 @@ app.post('/signup', function (req, res) {
 
 
 });
-// verify the token and return it if it's valid
-app.get('/verifyToken', function (req, res) {
+
+/* app.get('/verifyToken', function (req, res) {
     // check header or url parameters or post parameters for token
     var token = req.body.token || req.query.token;
     if (!token) {
@@ -240,7 +240,8 @@ app.get('/verifyToken', function (req, res) {
         });
     }
     // check token that was passed by decoding token using secret
-    jwt.verify(token, process.env.JWT_SECRET, function (err, user) {
+    console.log(token)
+   /*  jwt.verify(token, process.env.JWT_SECRET, function (err, user) {
         if (err) return res.status(401).json({
             error: true,
             message: "Invalid token."
@@ -257,7 +258,7 @@ app.get('/verifyToken', function (req, res) {
         var userObj = utils.getCleanUser(userData);
         return res.json({ user: userObj, token });
     });
-});
+});  */
 
 app.post("/saveComment", (req, res) => {
     const comment = req.body
